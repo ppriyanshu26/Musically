@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/upload.css') }}">
+</head>
+<body>\
+    <div class="background-container"></div>
+    <div class="container">
+        <h2>Upload MP3 File</h2>
+        <form id="uploadForm" action="/file" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".mp3" required>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
